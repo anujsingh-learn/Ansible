@@ -1,0 +1,21 @@
+---
+# HEADER SECTION
+  - name: This playbook will install java
+    hosts: test
+
+# TASK SECTION
+    tasks:
+      - name: installing java
+        apt:
+          name: openjdk-8-jdk
+          state: present
+
+# HEADER SECTION
+  - name: This playbook will install mysql-server
+    hosts: prod
+# TASK SECTION
+    tasks:
+      - name: installing mysql-server
+        apt:
+          name: mysql-server
+          state: present

@@ -1,0 +1,10 @@
+---
+# HEADER
+  - name: This playbook will write to a file
+    hosts: webservers
+# TASK SECTION
+    tasks:
+      - name: To write in a file
+        shell: echo "This text has been added by custom script" > /tmp/1.txt
+        args:
+          chdir: /tmp
